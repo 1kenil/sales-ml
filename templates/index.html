@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf—8"> 
+
+    <title>ML</title> 
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/main-res.css') }}">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='logo.png')}}" />
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+
+
+  </head>
+
+    <body>
+
+
+
+        <div id="not-logged" class="login" hidden>
+
+          <div class="logo-x">
+            <img src="{{url_for('static', filename='mlogo.png')}}">
+          </div>
+  
+          <p id="titlee" class="text-simple">ML Sales Model</p>
+   
+      <form id="formlo" method="POST" onsubmit="login(event)">
+
+        <div id="lobu" class="logo-box">
+          <input id="btnLogin" class="loginbutton btnLogin" type="submit" value="Start Prediction">
+        </div>
+
+
+    </form>
+
+  
+        
+      </div>
+
+
+
+      <footer>
+        <p class="main-footer">This is created for Product demo.</p>
+      </footer>
+    
+    
+
+  
+      <div id="loader-div" class="loader-div" hidden>
+        <img class="loader-img" src="{{url_for('static', filename='loader.gif')}}"  width="80" height="80" >
+    </div>  
+
+
+  
+
+  <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+
+
+    </body>
+
+</html>

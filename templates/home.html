@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf—8"> 
+
+    <title>ML - Home</title> 
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/main-res.css') }}">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='logo.png')}}" />
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+
+
+  </head>
+
+    <body>
+
+
+
+        <div id="not-logged" class="login" hidden>
+
+          <div class="logo-x">
+            <img src="{{url_for('static', filename='mlogo.png')}}">
+          </div>
+  
+          <p id="titlee" class="text-simple">ML Sales Model</p>
+          <p class="text" id="smalltitle">Enter valid data to predict the Sales in future</p>
+
+      <form id="formlo" method="POST" action="{{url_for('home')}}">
+
+        <div class="textField">
+        <input  name="tv" class="email" type="text" required>
+        <label id="laem">TV</label>
+        </div>
+
+        <div class="textField">
+        <input id="mobile" name="mobile" type="text" required>
+        <label id="lapass">Mobile</label>
+        </div>
+
+        <div class="textField">
+        <input id="radio" name="radio" type="text" required>
+        <label id="lapass">Radio</label>
+        </div>
+
+        <div class="textField">
+        <input id="news" name="news" type="text" required>
+        <label id="lapass">Newspaper</label>
+        </div>
+        
+    
+        <div id="errorlogin" class="errorlogin" >
+          <p id="errortxt" class="errorlogin"></p>
+        </div>
+
+        <div id="lobu" class="logo-box">
+          <input id="btnLogin" class="loginbutton btnLogin" type="submit" value="Predict">
+        </div>
+
+        <p id="btnSignup" class="btnCreatnew" onclick="reset()">Check the accuracy of this Model.</p>
+
+        <p id="btnnew" class="btnCreatnew" onclick="signup()">Contact us</p>
+
+    </form>
+
+  
+
+        
+      </div>
+
+
+
+<!--      <div id="logged-in" class="notlogin" hidden>
+
+        <nav class="navbar">
+          <object class="logo" id="logo" data="res/logo.png" type="image/png"></object>
+          <object type="text" class="titlename">Analytics</object>
+          <object type="text" class="title">Report of Name Ltd</object>
+
+           <div class="t1">  
+          <object type="text" class="title1">Report of Name Ltd</object>
+          <object type="text" class="title2">Report of Name Ltd</object>
+          </div>
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#home">How to use</a></li>
+            <li><a href="#home">Contact us</a></li>
+            <li><a href="#home">Settings</a></li>
+           </ul>
+           <input id="btnLogOut" class="btnLogOut" onclick="logout()" type="submit" value="Log Out">
+          </nav>
+
+          <div class="line"> </div>
+
+
+
+       <form method="POST">
+
+        <div class="btnLogOut">
+          <input id="btnLogOut" onclick="logout()" type="submit" value="Log Out">
+        </div>
+
+        
+        <h5>This is created for Product demo by KENIN.</h5>
+
+      </form> 
+
+     
+      </div> -->
+
+      <footer>
+        <p class="main-footer">This is created for Product demo.</p>
+      </footer>
+    
+    
+
+  
+      <div id="loader-div" class="loader-div" hidden>
+        <img class="loader-img" src="{{url_for('static', filename='loader.gif')}}"  width="80" height="80" >
+      </div>  
+
+
+  
+
+    <script type="text/javascript" src="{{url_for('static', filename='js/main.js')}}"></script>
+
+
+    </body>
+
+</html>
