@@ -1,5 +1,5 @@
 # Sales ML Model with Flask
-# https://github.com/1kenil/sales-ml
+
 
 # Hello 👋🏻
 
